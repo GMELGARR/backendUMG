@@ -1,0 +1,40 @@
+# Logs del sistema
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de producción y compilación
+build/
+dist/
+
+# Variables de entorno y configuración
+.env
+.env.local
+.env.*.local
+
+# Configuración de bases de datos y dependencias locales
+*.sql
+.DS_Store
+
+# Archivos temporales del sistema operativo
+Thumbs.db
+*.swp
+*.swo
+._*
+.idea/
+.vscode/
+
+# Archivos de configuración de paquetes
+package-lock.json
+yarn.lock
+
+# Subida a plataformas como Vercel o Netlify
+.vercel/
+.netlify/
+
+# Configuración personal de tu editor
+*.code-workspace
