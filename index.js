@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import cors from "cors";
 import session from "express-session";
 import dotenv from "dotenv";
@@ -14,6 +15,10 @@ import DashboardRoute from "./routes/DashboardRoute.js";
 dotenv.config();
 
 const app = express();
+
+app.get('/favicon.ico', (req, res) => {
+    res.status(204).end();
+});
 
 // Configuración básica de seguridad
 app.use(helmet({
