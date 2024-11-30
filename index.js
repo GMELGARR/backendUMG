@@ -46,7 +46,7 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000', // Mantenemos HTTPS
+    origin: process.env.CLIENT_URL, // Cambiamos esto para usar CLIENT_URL
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
