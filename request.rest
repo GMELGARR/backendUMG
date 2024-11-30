@@ -1,0 +1,157 @@
+// Create a user role admin
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Gerson Melgar",
+    "username": "gmelgar",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin",
+    "isActive": "true"
+}
+
+###
+// Create a user role user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Mariano Galvez",
+    "username": "mgalvez",
+    "password": "Mg2024",
+    "confPassword": "Mg2024",
+    "role": "user",
+    "isActive": "true"
+}
+
+###
+// Create a user role user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Luis Alvarez",
+    "username": "lalvarez",
+    "password": "Guatemala24",
+    "confPassword": "Guatemala24",
+    "role": "user",
+    "isActive": "true"
+}
+
+###
+//Get All Users
+Get http://localhost:5000/users
+
+###
+//Get single user by uuid
+GET http://localhost:5000/users/385e9e03-a0ca-42c6-ae95-37ddea45aaf4
+
+###
+// Update user
+PATCH http://localhost:5000/users/786a86a7-576a-4e87-a8e4-172e709aca71
+Content-Type: application/json
+
+{
+    "name": "Mariano Galvez",
+    "username": "mgalvez",
+    "password": "Mg2025",
+    "confPassword": "Mg2025",
+    "role": "user",
+    "isActive": "true"
+}
+
+###
+// Create user admin
+POST HTTP://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Fernanda Ocaña",
+    "username": "focana",
+    "password": "Focana2024",
+    "confPassword": "Focana2024",
+    "role": "admin",
+    "isActive": "true"
+}
+
+### 
+// Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "focana",
+    "password": "Focana2024"
+}
+
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// GET ALL PROJECTS
+GET http://localhost:5000/projects
+
+###
+// POST Data project
+POST http://localhost:5000/projects
+Content-Type: application/json
+
+{
+    "name": "Clinica Emanuel",
+    "description": "Clínica especializada en atención médica renal, sistema para control interno de pacientes.",
+    "technologies": "React, Node.js, Express, SQL",
+    "fechaInicio": "2024-01-01",
+    "fechaEstimacion": "2024-12-31",
+    "estado": "En progreso"
+}
+
+###
+// POST Data project
+POST http://localhost:5000/projects
+Content-Type: application/json
+
+{
+    "name": "Ferreteria Sanchez",
+    "description": "Venta de todo tipo de materiales y herramientas de construccion.",
+    "technologies": "React, Node.js, Express, SQL",
+    "fechaInicio": "2024-11-29",
+    "fechaEstimacion": "2025-06-14",
+    "repositoryUrl": "https://www.mirepo.pruebaprivado.com",
+    "estado": "En progreso"
+}
+
+###
+// POST Data project
+POST http://localhost:5000/projects
+Content-Type: application/json
+
+{
+    "name": "Calculadora",
+    "description": "Una calculadora básica con funciones matemáticas simples",
+    "technologies": "JavaScript",
+    "fechaInicio": "2024-11-29",
+    "fechaEstimacion": "2025-06-14",
+    "repositoryUrl": "https://github.com/jasmine/calculator-demo",
+    "estado": "En progreso"
+}
+
+###
+// POST Run Test
+POST http://localhost:5000/projects/ca959cbc-d906-4ae0-b4a0-d95ee880dc09/tests
+
+###
+// POST Run Test
+POST http://localhost:5000/projects/3ba54644-41b9-4a09-b098-40e6d499db5f/tests
+
+###
+//Get tests
+GET http://localhost:5000/tests
+
+###
+// POST Run Test
+POST http://localhost:5000/projects/574b3c8f-509b-4ba1-a733-a0b7ff9917a6/tests
